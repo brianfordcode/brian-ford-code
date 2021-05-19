@@ -1,5 +1,11 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+<div class="about">
+  <h1>About Me</h1>
+  <p>this is where i write my bio</p>
+  <p>this is where i write my bio</p>
+  <p>this is where i write my bio</p>
+  <p>this is where i write my bio</p>
+  <p>this is where i write my bio</p>
+  <p>this is where i write my bio</p>
+</div>
 </template>
