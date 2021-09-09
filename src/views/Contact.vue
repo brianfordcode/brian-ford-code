@@ -1,7 +1,6 @@
 <template>
     <div class="contact">
         <h1>Contact Me</h1>
-        
         <a href="mailto:someone@yoursite.com">brianfordcode@gmail.com</a>
         
        

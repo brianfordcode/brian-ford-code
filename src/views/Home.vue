@@ -1,16 +1,19 @@
 <template>
-  <div class="home">
-    <h1>Brian Ford</h1>
-    <p>Front End Developer</p>
-  </div>
+  <opening/>
+  <about/>
+  <work/>
+  <siteFooter/>
 </template>
 
 <script>
+import opening from "../components/opening.vue"
+import about from "../components/about.vue"
+import work from "../components/work.vue"
+import siteFooter from "../components/footer.vue"
 
 export default {
   name: 'Home',
-  components: {
-  }
+  components: { opening, about, work, siteFooter }
 }
 </script>
 
