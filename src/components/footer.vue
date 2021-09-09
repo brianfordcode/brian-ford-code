@@ -1,5 +1,5 @@
 <template>
-  <footer>2021 Brian Ford Code</footer>
+  <footer>2021 &copy; Brian Ford Code</footer>
 </template>
 
 <script>

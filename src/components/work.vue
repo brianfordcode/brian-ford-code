@@ -55,8 +55,12 @@ export default {
 
 .projects-container {
     /* border: 1px solid blue; */
-    width: 800px;
+    max-width: 900px;
     margin: 0 auto 50px auto;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -64,9 +68,21 @@ export default {
     grid-gap: 20px;
 }
 
+@media screen and (max-width: 720px) {
+    .projects-container {
+        grid-template-columns: 1fr 1fr
+    }
+}
+@media screen and (max-width: 500px) {
+    .projects-container {
+        grid-template-columns: 1fr
+    }
+}
+
 .box {
     height: 200px;
     width: 200px;
+    margin: 10px;
     background-color: grey;
     
 }

@@ -5,7 +5,13 @@
     <div class="text">
         <h1>About</h1>
         <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam sapiente fuga voluptate deserunt et provident suscipit error unde! Reprehenderit consequuntur voluptatum rerum laudantium. Modi facilis natus repudiandae praesentium delectus! Porro voluptates, aliquam maxime odio sint perferendis veritatis ducimus possimus animi sunt aut nam corporis asperiores et illo. Cumque nobis eos quaerat, tempore laborum aliquid, laudantium ratione autem dignissimos accusantium aliquam eius ullam eaque nesciunt!<br><br>Repudiandae architecto necessitatibus eum non consequatur molestiae dicta sequi voluptatem amet itaque vero assumenda libero repellendus modi eius unde hic provident harum adipisci eos sunt, officia optio minima quasi. Cumque iste esse reprehenderit neque quibusdam.
+        I love being at the intersection of art and logic. I like to be on the front lines of everything I do. I’m a problem solver, a creator and an innovator. Simplicity is at the heart of everything I do.
+        <br>
+        <br>
+        With a background in film production, I know the importance of storytelling.
+        <br>
+        <br>
+        In my spare time you will find me travelling, sailing or playing poker.
         </p>
         <div class="links">
             <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
@@ -21,6 +27,7 @@
 <script>
 export default {
 
+
 }
 </script>
 
@@ -28,40 +35,51 @@ export default {
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     text-align: center;
-    padding: 50px 30px 0 30px;
+    padding: 50px 50px 0 30px;
     font-family: 'Courier New', Courier, monospace;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-
-
-.text p {
-    padding: 30px;
+@media screen and (max-width: 720px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text h1 {
+        padding-top: 20px;
+    }
+    
 }
 
 .text {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
-
+.text h1 {
+    padding-bottom: 20px;
 }
 
 
 .links {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     /* border: 1px solid blue; */
-    justify-content: space-between;
-    width: 40%;
+    width: 50%;
+    padding: 20px;
 }
 
 .links img {
     cursor: pointer;
     transition: .15s ease-in-out;
     height: 50px;
+    /* margin: 20px; */
 }
 
 .links img:hover {
