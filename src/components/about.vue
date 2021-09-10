@@ -5,14 +5,15 @@
     <div class="text">
         <h1>About</h1>
         <p>
-        I love being at the intersection of art and logic. I like to be on the front lines of everything I do. I’m a problem solver, a creator and an innovator. Simplicity is at the heart of everything I do.
+        I love being at the intersection of art and logic. Put me on the front lines of anything and I will thrive. I’m a problem solver, a creator and an innovator. Simplicity is at the heart of everything I do.
         <br>
         <br>
-        With a background in film production, I know the importance of storytelling.
+        With a background in film production, I know the importance of storytelling and how it can be incorporated into everything we make.
         <br>
         <br>
-        In my spare time you will find me travelling, sailing or playing poker.
+        In my spare time you will find me travelling, sailing, photography, playing poker and coding the next greatest app.
         </p>
+        <button class="resume-btn">Download my Resume</button>
         <div class="links">
             <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
             <a href="#"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-email-advertising-kiranshastry-solid-kiranshastry-1.png"/></a>
@@ -36,7 +37,7 @@ export default {
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     text-align: center;
     padding: 50px 50px 0 30px;
     font-family: 'Courier New', Courier, monospace;
@@ -44,13 +45,21 @@ export default {
     margin: 0 auto;
 }
 
+.my-image {
+    width: 400px;
+}
+
 @media screen and (max-width: 720px) {
     .container {
         flex-direction: column;
         align-items: center;
+        padding: 50px;
     }
     .text h1 {
         padding-top: 20px;
+    }
+    .my-image {
+        width: 300px;
     }
     
 }
@@ -86,9 +95,19 @@ export default {
     transform: scale(1.1);
 }
 
+.resume-btn {
+    margin: 20px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    transition: .15s ease-in-out;
+}
 
-.my-image {
-    width: 400px;
+.resume-btn:hover {
+    transform: scale(1.1);
 }
 
 
