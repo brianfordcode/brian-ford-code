@@ -2,12 +2,14 @@
     <h1 class="title">Projects</h1>
 
     <div class="projects-container">
-        <div v-for="project in projects"
-             :key="project"
+        <div v-for="(project, index) in projects"
+             :key="index"
              class="box"
-             @mouseover="mouseOver"
+             
+             @mouseenter="showDetails(index)"
+             @mouseleave="showDetails(index)"
              >
-             <div v-if="hover" class="cover">
+             <div :class="{details:true, active: active }" v-if="selectedProjectIndex==index">
                 <p>{{ project.title }}</p>
                 <p>{{ project.kind }}</p>
              </div>
@@ -21,20 +23,18 @@
 export default {
 
     methods: {
-        mouseOver() {
-            for (var i = 0; i < this.projects.length; i++) {
-                console.log(this.projects[i])
-            }
-
-
+        showDetails(index) {
+            this.selectedProjectIndex = index
+            this.active = !this.active
             
-        }
-    },
 
+        },
+    },
 
     data() {
         return {
-            hover: false,
+            active: false,
+            selectedProjectIndex: null,
             projects: [
                 {
                 title: "Portraits by Basundhara",
@@ -102,18 +102,22 @@ export default {
     transform: scale(1.1);
 }
 
-.cover {
-   font-family: 'Courier New', Courier, monospace;
+.details {
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     position: absolute;
     background-color: rgba(255,255,255,0.75);
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.active {
+    display: flex;
 }
 
 </style>
