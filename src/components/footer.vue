@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <span> 2021 &copy; Brian Ford Code</span>
+    <span>{{new Date().getFullYear()}} &copy; Brian Ford Code</span>
     <a href="#">This Sites Code</a>
 
   </footer>

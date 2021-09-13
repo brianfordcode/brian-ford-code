@@ -55,6 +55,12 @@ export default {
                 screenshot: require("../assets/projects/ram-nami-screenshot.jpg"),
                 url: "#"
                 },
+                {
+                title: "Ford the World",
+                kind: "Travel Website",
+                screenshot: "",
+                url: "#"
+                },
             ]
         }
     }
