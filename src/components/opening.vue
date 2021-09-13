@@ -3,7 +3,7 @@
         <div class="text">
             <p>Hi, my name is <span class="name">Brian Ford</span></p>
             <p>I'm a <span class="fed">Front-End Developer</span></p>
-            <button class="btn">See My Work</button>
+            <button @click="handleClick" class="btn">See My Work</button>
         </div>
         
     </div>
@@ -11,12 +11,34 @@
 </template>
 
 <script>
-export default {
 
+export default {
+    
+    methods: {
+        handleClick() {
+
+            this.windowHeight = window.innerHeight
+
+            const scrollOptions = {
+                top: this.windowHeight,
+                behavior: "smooth",
+            }
+        
+            window.scroll(scrollOptions)
+
+
+        }
+    },
+    data() {
+        return {
+            windowHeight: 0
+        }
+    }
 }
 </script>
 
 <style scoped>
+
 
 .container {
     background-color: rgb(22, 22, 97);

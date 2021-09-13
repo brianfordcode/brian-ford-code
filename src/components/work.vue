@@ -26,14 +26,13 @@ export default {
         showDetails(index) {
             this.selectedProjectIndex = index
             this.active = !this.active
-            
-
         },
     },
 
     data() {
         return {
             active: false,
+            inactive: true,
             selectedProjectIndex: null,
             projects: [
                 {
@@ -45,10 +44,6 @@ export default {
                 title: "Ram Nami Trading Co.",
                 kind: "E-Commerce Website",
                 screenshot: require("../assets/projects/ram-nami-screenshot.jpg")
-                },
-                {
-                title: "title",
-                screenshot: "url",
                 },
             ]
         }
@@ -118,6 +113,18 @@ export default {
 
 .active {
     display: flex;
+    animation-duration: .15s;
+    animation-name: slideIn;
 }
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
 
 </style>
