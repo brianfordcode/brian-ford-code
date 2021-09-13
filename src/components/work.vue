@@ -1,19 +1,27 @@
 <template>
     <h1 class="title">Projects</h1>
-
     <div class="projects-container">
         <div v-for="(project, index) in projects"
              :key="index"
              class="box"
-             
-             @mouseenter="showDetails(index)"
-             @mouseleave="showDetails(index)"
+             @mouseover="showDetails(index)"
+             @mouseleave="removeDetails(index)"
              >
-             <div :class="{details:true, active: active }" v-if="selectedProjectIndex==index">
+             <a :href="`${project.url}`"
+                target="_blank"
+             >
+             <div class="details"
+                  v-if="selectedProjectIndex==index"
+             >
                 <p>{{ project.title }}</p>
                 <p>{{ project.kind }}</p>
              </div>
-             <img style="height: 200px;" :src="project.screenshot" :alt="project.screenshot">
+             <img style="height: 200px;"
+                  :src="project.screenshot"
+                  :alt="project.screenshot"
+             >
+             </a>
+             
         </div>
     </div>
 
@@ -25,25 +33,27 @@ export default {
     methods: {
         showDetails(index) {
             this.selectedProjectIndex = index
-            this.active = !this.active
         },
+        removeDetails() {
+            this.selectedProjectIndex = null
+        }
     },
 
     data() {
         return {
-            active: false,
-            inactive: true,
             selectedProjectIndex: null,
             projects: [
                 {
                 title: "Portraits by Basundhara",
                 kind: "Photography Website",
-                screenshot: require("../assets/projects/basu-site-screenshot.jpg")
+                screenshot: require("../assets/projects/basu-site-screenshot.jpg"),
+                url: "#"
                 },
                 {
                 title: "Ram Nami Trading Co.",
                 kind: "E-Commerce Website",
-                screenshot: require("../assets/projects/ram-nami-screenshot.jpg")
+                screenshot: require("../assets/projects/ram-nami-screenshot.jpg"),
+                url: "#"
                 },
             ]
         }
@@ -53,14 +63,7 @@ export default {
 
 <style scoped>
 
-.title {
-    text-align: center;
-    padding: 50px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
 .projects-container {
-    /* border: 1px solid blue; */
     max-width: 900px;
     margin: 0 auto 50px auto;
     display: grid;
@@ -81,6 +84,12 @@ export default {
     }
 }
 
+.title {
+    text-align: center;
+    padding: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .box {
     overflow: hidden;
     position: relative;
@@ -99,22 +108,16 @@ export default {
 
 .details {
     font-family: 'Courier New', Courier, monospace;
+    color: black;
     text-align: center;
     position: absolute;
     background-color: rgba(255,255,255,0.75);
     height: 100%;
     width: 100%;
-    margin: 0 auto;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-}
-
-.active {
-    display: flex;
-    animation-duration: .15s;
-    animation-name: slideIn;
+    animation:  slideIn .45s;
 }
 
 @keyframes slideIn {
