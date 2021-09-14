@@ -55,7 +55,19 @@ export default {
     text-align: right;
     color: white;
     padding: 30px;
+    animation: fadeIn 2s;
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
 .name {
     color: red;
     font-size: 50px;

@@ -1,6 +1,13 @@
 <template>
-    <h1 class="title">Projects</h1>
-    <div class="projects-container">
+
+    <h1 class="title"
+        v-scrollAnimate="'fadeIn'"
+        style="animation-duration: 3s"
+     >Projects</h1>
+    <div class="projects-container"
+         v-scrollAnimate="'fadeIn'"
+         style="animation-duration: 3.5s"
+     >
         <div v-for="(project, index) in projects"
              :key="index"
              class="box"
@@ -24,6 +31,8 @@
              
         </div>
     </div>
+
+    
 
 </template>
 
@@ -58,7 +67,7 @@ export default {
                 {
                 title: "Ford the World",
                 kind: "Travel Website",
-                screenshot: "",
+                screenshot: require("../assets/projects/coming-soon.png"),
                 url: "#"
                 },
             ]

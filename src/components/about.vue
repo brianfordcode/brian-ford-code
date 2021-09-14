@@ -1,10 +1,17 @@
 <template>
 <div class="container">
-    <img class="my-image" src="../assets/my-image.png" alt="my-image">
+    <img
+        class="my-image"
+        src="../assets/my-image.png"
+        alt="my-image"
+        v-scrollAnimate="'fadeAndSlideLeft'"
+    >
     
-    <div class="text">
-        <h1>About</h1>
-        <p>
+    <div
+        class="text"
+    >
+        <h1 v-scrollAnimate="'fadeIn'" style="animation-duration: 2s">About</h1>
+        <p v-scrollAnimate="'fadeIn'" style="animation-duration: 2.5s">
         I love being at the intersection of art and logic. Put me on the front lines of anything and I will thrive. I’m a problem solver, a creator and an innovator. Simplicity is at the heart of everything I do.
         <br>
         <br>
@@ -13,8 +20,15 @@
         <br>
         In my spare time you will find me travelling, sailing, photography, playing poker and coding the next greatest app.
         </p>
-        <button class="resume-btn">Download my Resume</button>
-        <div class="links">
+        <button class="resume-btn"
+        v-scrollAnimate="'fadeIn'"
+        style="animation-duration: 3s"
+        >
+        Download my Resume
+        </button>
+        <div class="links"
+             v-scrollAnimate="'fadeIn'" style="animation-duration: 3s"
+        >
             <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
             <a href="#"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-email-advertising-kiranshastry-solid-kiranshastry-1.png"/></a>
             <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/></a>
@@ -108,6 +122,36 @@ export default {
 
 .resume-btn:hover {
     transform: scale(1.1);
+}
+
+
+/* directives */
+.fadeAndSlideLeft {
+   animation:  slideIn 2s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
