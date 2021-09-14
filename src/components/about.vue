@@ -10,7 +10,7 @@
     <div
         class="text"
     >
-        <h1 v-scrollAnimate="'fadeIn'" style="animation-duration: 2s">About</h1>
+        <h1 v-scrollAnimate="'fadeIn'" style="animation-duration: 2s">About Me</h1>
         <p v-scrollAnimate="'fadeIn'" style="animation-duration: 2.5s">
         I love being at the intersection of art and logic. Put me on the front lines of anything and I will thrive. I’m a problem solver, a creator and an innovator. Simplicity is at the heart of everything I do.
         <br>
@@ -122,36 +122,6 @@ export default {
 
 .resume-btn:hover {
     transform: scale(1.1);
-}
-
-
-/* directives */
-.fadeAndSlideLeft {
-   animation:  slideIn 2s;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-500px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-.fadeIn {
-    animation-name: fadeIn;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 

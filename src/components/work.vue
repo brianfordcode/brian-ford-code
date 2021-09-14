@@ -3,7 +3,7 @@
     <h1 class="title"
         v-scrollAnimate="'fadeIn'"
         style="animation-duration: 3s"
-     >Projects</h1>
+     >Projects I Make</h1>
     <div class="projects-container"
          v-scrollAnimate="'fadeIn'"
          style="animation-duration: 3.5s"

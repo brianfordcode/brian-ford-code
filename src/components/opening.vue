@@ -1,10 +1,12 @@
 <template>
     <div class="container">
+        <img class="left-bracket" src="../assets/brackets/left-bracket.png" alt="left-bracket">
         <div class="text">
             <p>Hi, my name is <span class="name">Brian Ford</span></p>
             <p>I'm a <span class="fed">Front-End Developer</span></p>
             <button @click="handleClick" class="btn">See My Work</button>
         </div>
+        <img class="right-bracket" src="../assets/brackets/right-bracket.png" alt="right-bracket">
         
     </div>
 
@@ -47,7 +49,15 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+.left-bracket {
+    animation: slideInLeft 1s;
+}
+
+.right-bracket {
+    animation: slideInRight 1s;
 }
 
 .text {

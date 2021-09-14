@@ -31,12 +31,33 @@
     }
     to {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
 .fadeIn {
     animation-name: fadeIn;
+    animation-duration: 2s;
 }
 
 @keyframes fadeIn {

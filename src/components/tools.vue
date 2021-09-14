@@ -9,7 +9,6 @@
   <div 
       class="logos"
       v-scrollAnimate="'fadeIn'"
-      style="animation-duration: 3s"
   >
       <img src="../assets/tools/html-js-css.png" alt="html-js-css">
       <img src="../assets/tools/vue.png" alt="vue">
