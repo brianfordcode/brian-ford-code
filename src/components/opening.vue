@@ -4,7 +4,7 @@
         <div class="text">
             <p>Hi, my name is <span class="name">Brian Ford</span></p>
             <p>I'm a <span class="fed">Front-End Developer</span></p>
-            <button @click="handleClick" class="btn">See My Work</button>
+            <button @click="handleClick" class="btn">See More</button>
         </div>
         <img class="right-bracket" src="../assets/brackets/right-bracket.png" alt="right-bracket">
         
@@ -76,8 +76,6 @@ export default {
     }
 }
 
-
-
 .name {
     color: red;
     font-size: 50px;
@@ -99,6 +97,14 @@ export default {
 }
 .btn:hover {
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 500px) {
+    .left-bracket,
+    .right-bracket,
+    .btn {
+        display: none;
+    }
 }
 
 
