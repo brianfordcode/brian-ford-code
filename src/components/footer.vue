@@ -20,13 +20,16 @@ footer {
     justify-content: space-around;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
+    padding: 13px;
     background-color: rgb(22, 22, 97);;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
   footer {
     flex-direction: column;
+  }
+  a {
+    margin: 10px;
   }
 }
 

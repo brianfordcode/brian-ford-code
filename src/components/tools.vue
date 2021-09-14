@@ -35,7 +35,7 @@ h1 {
 }
 
 .logos {
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -43,6 +43,16 @@ h1 {
     justify-items: center;
     grid-gap: 20px;
     padding-bottom: 50px;
+}
+@media screen and (max-width: 720px) {
+    .logos {
+        grid-template-columns: 1fr 1fr
+    }
+}
+@media screen and (max-width: 500px) {
+    .logos {
+        grid-template-columns: 1fr
+    }
 }
 
 img {
