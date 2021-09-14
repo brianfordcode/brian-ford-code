@@ -95,6 +95,7 @@ export default {
     cursor: pointer;
     transition: .15s ease-in-out;
     outline: none;
+    -webkit-appearance: none;
 }
 .btn:hover {
     transform: scale(1.1);
