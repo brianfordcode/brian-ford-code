@@ -19,7 +19,6 @@ footer {
     align-items: center;
     justify-content: space-around;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
     padding: 13px;
     background-color: rgb(22, 22, 97);;
 }

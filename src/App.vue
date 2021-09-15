@@ -7,37 +7,19 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-
-</style>
-
-<style>
-
-* {
-  margin: 0;
-  padding: 0;
-}
 
 /* directives */
 .fadeAndSlideLeft {
-   animation:  slideIn 2s;
+   animation:  slideInLeft 1.5s;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-500px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-500px);
+        transform: translateX(-100vw);
     }
     to {
         opacity: 1;
@@ -47,7 +29,7 @@
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(500px);
+        transform: translateX(100vw);
     }
     to {
         opacity: 1;

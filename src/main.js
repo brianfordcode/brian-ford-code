@@ -28,20 +28,10 @@ const fadeIn= new IntersectionObserver(
         })
     }
 )
-const fadeAndSlideBottom= new IntersectionObserver(
-    (entries, animatedScrollObserver) => {
-        entries.forEach((entry) => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('fadeAndSlideBottom')
-                animatedScrollObserver.unobserve(entry.target)
-            }
-        })
-    }
-)
 
 app.directive('scrollAnimate', {
     beforeMount: (el, binding) => {
-        if (binding.value=="fadeAndSlideLeft") {
+        if (binding.value=="slideInLeft") {
             fadeAndSlideLeft.observe(el)
         }
         if (binding.value=="fadeIn") {

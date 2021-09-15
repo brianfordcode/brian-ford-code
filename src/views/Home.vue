@@ -1,9 +1,11 @@
 <template>
+
   <opening/>
   <about/>
   <work/>
   <tools/>
   <siteFooter/>
+
 </template>
 
 <script>
@@ -21,11 +23,4 @@ export default {
 
 <style scoped>
 
-  h1 {
-    font-size: 60px;
-  }
-
-  p {
-    padding-left: 140px;
-  }
 </style>

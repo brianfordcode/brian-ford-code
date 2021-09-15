@@ -30,7 +30,6 @@ export default {
 h1 {
     text-align: center;
     padding: 30px;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .logos {

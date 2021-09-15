@@ -6,7 +6,6 @@
      >Projects I Make</h1>
     <div class="projects-container"
          v-scrollAnimate="'fadeIn'"
-         style="animation-duration: 3.5s"
      >
         <div v-for="(project, index) in projects"
              :key="index"
@@ -102,7 +101,6 @@ export default {
 .title {
     text-align: center;
     padding: 50px;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .box {
@@ -122,7 +120,6 @@ export default {
 }
 
 .details {
-    font-family: 'Courier New', Courier, monospace;
     color: black;
     text-align: center;
     position: absolute;

@@ -61,7 +61,6 @@ export default {
 }
 
 .text {
-    font-family: 'Courier New', Courier, monospace;
     text-align: right;
     color: white;
     padding: 30px;
@@ -88,12 +87,10 @@ export default {
 .btn {
     margin-top: 50px;
     padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
     border: none;
     cursor: pointer;
     transition: .15s ease-in-out;
     outline: none;
-    -webkit-appearance: none;
 }
 .btn:hover {
     transform: scale(1.1);
