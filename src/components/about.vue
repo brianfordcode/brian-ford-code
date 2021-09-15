@@ -1,25 +1,22 @@
 <template>
 
+<!-- RESUME MODAL -->
 <transition name="slide">
     <div class="modal" v-if="modalShow">
-        
         <div class="modal-content">
             <div class="close" @click="modalShow=false">&#215;</div>
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vQIIcbNc9sB2DAXgDy64UXVftspwUJw9Z39tXP64bOnBMwyGXx5hnOubx9bpR63nk6COnng_ttRlF7w/pub?embedded=true" />
         </div>
-    
     </div>
 </transition>
 
 <div class="container">
-    
     <img
         class="my-image"
         src="../assets/my-image.png"
         alt="my-image"
         v-scrollAnimate="'slideInLeft'"
     >
-    
     <div
         class="text"
         v-scrollAnimate="'fadeIn'"
@@ -34,11 +31,11 @@
         <br>
         When I'm not coding the next greatest app, you will find me travelling, sailing, doing photography, playing poker or writing screenplays.
         </p>
-        <button class="resume-btn" @click="modalShow=true">See my Resume</button>
+        
         <div class="links">
-            <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
-            <a href="#"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-email-advertising-kiranshastry-solid-kiranshastry-1.png"/></a>
-            <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/></a>
+            <button class="resume-btn" @click="showResume">See my Resume</button>
+            <a href="https://github.com/brianfordcode" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
+            <a href="mailto:brianfordcode@gmail.com" target="_blank"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-email-advertising-kiranshastry-solid-kiranshastry-1.png"/></a>
         </div>
     </div>
 </div>
@@ -48,6 +45,11 @@
 <script>
 
 export default {
+    methods: {
+        showResume() {
+            window.innerWidth > 900 ? this.modalShow = true : window.open("https://docs.google.com/document/d/e/2PACX-1vQIIcbNc9sB2DAXgDy64UXVftspwUJw9Z39tXP64bOnBMwyGXx5hnOubx9bpR63nk6COnng_ttRlF7w/pub", '_blank');
+        }
+    },
     data() {
         return {
             modalShow: false,
@@ -62,10 +64,10 @@ export default {
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     text-align: center;
     padding: 30px 50px 0 50px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -73,35 +75,22 @@ export default {
     width: 400px;
 }
 
-@media screen and (max-width: 720px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        padding: 50px;
-    }
-    .text h1 {
-        padding-top: 20px;
-    }
-    .my-image {
-        width: 350px;
-    }
-}
-
 .text {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 100px;
+    height: 100%;
 }
 
 .text h1 {
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .links {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
     padding: 20px;
 }
 
@@ -109,7 +98,7 @@ export default {
     cursor: pointer;
     transition: .15s ease-in-out;
     height: 50px;
-    /* margin: 20px; */
+    margin: 0 10px;
 }
 
 .links img:hover {
@@ -179,6 +168,21 @@ iframe {
 .slide-enter-from,
 .slide-leave-to {
     opacity: 0;
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 50px 30px 50px;
+    }
+    .text h1 {
+        padding-top: 20px;
+    }
+    .my-image {
+        width: 350px;
+    }
+
 }
 
 </style>

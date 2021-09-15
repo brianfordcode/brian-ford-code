@@ -86,8 +86,15 @@ export default {
     justify-items: center;
     grid-gap: 20px;
 }
+.title {
+    text-align: center;
+    padding: 50px;
+}
 
 @media screen and (max-width: 720px) {
+    .title {
+        padding-top: 0;
+    }
     .projects-container {
         grid-template-columns: 1fr 1fr
     }
@@ -98,10 +105,7 @@ export default {
     }
 }
 
-.title {
-    text-align: center;
-    padding: 50px;
-}
+
 
 .box {
     overflow: hidden;
