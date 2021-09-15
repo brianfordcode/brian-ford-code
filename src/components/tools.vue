@@ -1,15 +1,8 @@
 <template>
+<div v-scrollAnimate="'fadeIn'">
 
-  <h1
-      v-scrollAnimate="'fadeIn'"
-      style="animation-duration: 2s"
-  >
-  Tools I Use
-  </h1>
-  <div 
-      class="logos"
-      v-scrollAnimate="'fadeIn'"
-  >
+  <h1>Tools I Use</h1>
+  <div class="logos">
       <img src="../assets/tools/html-js-css.png" alt="html-js-css">
       <img src="../assets/tools/vue.png" alt="vue">
       <img src="../assets/tools/sass.png" alt="sass">
@@ -17,6 +10,8 @@
       <img src="../assets/tools/webpack.png" alt="webpack">
       <img src="../assets/tools/adobe-creative-cloud.png" alt="adobe-creative-cloud">
   </div>
+
+</div>
 </template>
 
 <script>

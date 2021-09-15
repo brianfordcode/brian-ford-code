@@ -67,7 +67,7 @@ export default {
     align-items: center;
     text-align: center;
     padding: 30px 50px 0 50px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 

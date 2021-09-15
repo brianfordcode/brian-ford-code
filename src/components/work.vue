@@ -1,36 +1,32 @@
 <template>
+<div v-scrollAnimate="'fadeIn'">
 
-    <h1 class="title"
-        v-scrollAnimate="'fadeIn'"
-        style="animation-duration: 3s"
-     >Projects I Make</h1>
-    <div class="projects-container"
-         v-scrollAnimate="'fadeIn'"
-     >
-        <div v-for="(project, index) in projects"
-             :key="index"
-             class="box"
-             @mouseover="showDetails(index)"
-             @mouseleave="removeDetails(index)"
-             >
-             <a :href="`${project.url}`"
-                target="_blank"
-             >
-             <div class="details"
-                  v-if="selectedProjectIndex==index"
-             >
-                <p>{{ project.title }}</p>
-                <p>{{ project.kind }}</p>
-             </div>
-             <img style="height: 200px;"
-                  :src="project.screenshot"
-                  :alt="project.screenshot"
-             >
-             </a>
-             
-        </div>
+
+    <h1 class="title">Projects I Make</h1>
+
+    <div class="projects-container">
+            <div v-for="(project, index) in projects"
+                :key="index"
+                class="box"
+                @mouseover="showDetails(index)"
+                @mouseleave="removeDetails(index)"
+                >
+                <transition name="slide">
+                    <div class="details" v-if="selectedProjectIndex==index">
+                        <p>{{ project.title }}</p>
+                        <p>{{ project.kind }}</p>
+                        <a :href="`${project.url}`" target="_blank">Visit Site</a>
+                        <a :href="`${project.code}`" target="_blank">View Code</a>
+                    </div>
+                </transition>
+                    <img style="height: 200px;"
+                        :src="project.screenshot"
+                        :alt="project.screenshot"
+                    >
+            </div>
     </div>
 
+</div>
     
 
 </template>
@@ -55,19 +51,22 @@ export default {
                 title: "Portraits by Basundhara",
                 kind: "Photography Website",
                 screenshot: require("../assets/projects/basu-site-screenshot.jpg"),
-                url: "https://www.portraitsbybasundhara.com"
+                url: "https://www.portraitsbybasundhara.com",
+                code: "https://github.com/brianfordcode/basu-site"
                 },
                 {
                 title: "Ram Nami Trading Co.",
                 kind: "E-Commerce Website",
                 screenshot: require("../assets/projects/ram-nami-screenshot.jpg"),
-                url: "https://www.ramnamitrading.co"
+                url: "https://www.ramnamitrading.co",
+                code: "https://github.com/brianfordcode/ram-nami"
                 },
                 {
                 title: "Ford the World",
                 kind: "Travel Website",
                 screenshot: require("../assets/projects/coming-soon.png"),
-                url: "https://www.fordtheworld.com"
+                url: "https://www.fordtheworld.com",
+                code: "https://github.com/brianfordcode/ford-the-world"
                 },
             ]
         }
@@ -86,9 +85,48 @@ export default {
     justify-items: center;
     grid-gap: 20px;
 }
+
 .title {
     text-align: center;
     padding: 50px;
+}
+
+.box {
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    background-color: grey;
+    box-shadow: 0px 0px 33px -20px #000000;
+    transition: .15s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    background-color: rgba(255,255,255,0.75);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    animation:  slideIn .45s;
+}
+
+.details a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 3px;
+    transition: .15s ease-in-out;
+}
+
+.details a:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 720px) {
@@ -105,37 +143,6 @@ export default {
     }
 }
 
-
-
-.box {
-    overflow: hidden;
-    position: relative;
-    height: 200px;
-    width: 200px;
-    margin: 10px;
-    background-color: grey;
-    box-shadow: 0px 0px 33px -20px #000000;
-    cursor: pointer;
-    transition: .15s ease-in-out;
-}
-
-.box:hover {
-    transform: scale(1.1);
-}
-
-.details {
-    color: black;
-    text-align: center;
-    position: absolute;
-    background-color: rgba(255,255,255,0.75);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    animation:  slideIn .45s;
-}
-
 @keyframes slideIn {
     from {
         transform: translateY(-100px);
@@ -143,6 +150,16 @@ export default {
     to {
         transform: translateY(0px);
     }
+}
+
+.slide-enter-active,
+.slide-leave-active {
+    transition: transform 2s;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    transform: translateY(-100vw);
 }
 
 
