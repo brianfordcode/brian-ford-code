@@ -55,19 +55,19 @@ export default {
                 title: "Portraits by Basundhara",
                 kind: "Photography Website",
                 screenshot: require("../assets/projects/basu-site-screenshot.jpg"),
-                url: "#"
+                url: "https://www.portraitsbybasundhara.com"
                 },
                 {
                 title: "Ram Nami Trading Co.",
                 kind: "E-Commerce Website",
                 screenshot: require("../assets/projects/ram-nami-screenshot.jpg"),
-                url: "#"
+                url: "https://www.ramnamitrading.co"
                 },
                 {
                 title: "Ford the World",
                 kind: "Travel Website",
                 screenshot: require("../assets/projects/coming-soon.png"),
-                url: "#"
+                url: "https://www.fordtheworld.com"
                 },
             ]
         }
