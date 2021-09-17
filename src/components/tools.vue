@@ -10,6 +10,7 @@
       <img src="../assets/tools/webpack.png" alt="webpack">
       <img src="../assets/tools/adobe-creative-cloud.png" alt="adobe-creative-cloud">
       <img src="../assets/tools/firebase.png" alt="firebase">
+      <img src="../assets/tools/github.png" alt="github">
   </div>
 
 </div>
