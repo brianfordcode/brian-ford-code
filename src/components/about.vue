@@ -182,7 +182,6 @@ iframe {
     .my-image {
         width: 350px;
     }
-
 }
 
 </style>

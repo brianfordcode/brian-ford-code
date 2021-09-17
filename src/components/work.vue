@@ -58,7 +58,7 @@ export default {
                 title: "Ram Nami Trading Co.",
                 kind: "E-Commerce Website",
                 screenshot: require("../assets/projects/ram-nami-screenshot.jpg"),
-                url: "https://www.ramnamitrading.co",
+                url: "https://ramnamitradingco.netlify.app",
                 code: "https://github.com/brianfordcode/ram-nami"
                 },
                 {

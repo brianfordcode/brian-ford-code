@@ -9,9 +9,11 @@
       <img src="../assets/tools/bootstrap.png" alt="bootstrap">
       <img src="../assets/tools/webpack.png" alt="webpack">
       <img src="../assets/tools/adobe-creative-cloud.png" alt="adobe-creative-cloud">
+      <img src="../assets/tools/firebase.png" alt="firebase">
   </div>
 
 </div>
+
 </template>
 
 <script>

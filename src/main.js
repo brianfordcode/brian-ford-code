@@ -8,6 +8,7 @@ const app = createApp(App).use(router)
 // directives
 
 // FADE AND SLIDE LEFT
+
 const fadeAndSlideLeft= new IntersectionObserver(
     (entries, animatedScrollObserver) => {
         entries.forEach((entry) => {
@@ -18,6 +19,7 @@ const fadeAndSlideLeft= new IntersectionObserver(
         })
     }
 )
+
 const fadeIn= new IntersectionObserver(
     (entries, animatedScrollObserver) => {
         entries.forEach((entry) => {
