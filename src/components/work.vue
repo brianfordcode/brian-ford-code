@@ -64,8 +64,8 @@ export default {
                 {
                 title: "Ford the World",
                 kind: "Travel Website",
-                screenshot: require("../assets/projects/coming-soon.png"),
-                url: "https://www.fordtheworld.com",
+                screenshot: require("../assets/projects/ford-the-world-screenshot.png"),
+                url: "https://www.fordtheworld.netlify.app",
                 code: "https://github.com/brianfordcode/ford-the-world"
                 },
             ]
