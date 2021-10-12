@@ -62,11 +62,18 @@ export default {
                 code: "https://github.com/brianfordcode/ram-nami"
                 },
                 {
-                title: "Ford the World",
-                kind: "Travel Website",
-                screenshot: require("../assets/projects/ford-the-world-screenshot.png"),
-                url: "https://www.fordtheworld.netlify.app",
-                code: "https://github.com/brianfordcode/ford-the-world"
+                title: "Brian Ford Film",
+                kind: "My Film Website",
+                screenshot: require("../assets/projects/film-screenshot.png"),
+                url: "https://www.brianfordfilm.com",
+                code: "https://github.com/brianfordcode/brian-ford-film"
+                },
+                {
+                title: "Math Exercises",
+                kind: "Personal Project of Math Exercises",
+                screenshot: require("../assets/projects/math-screenshot.png"),
+                url: "https://www.mathexercises.netlify.app/",
+                code: "https://github.com/brianfordcode/math-exercises"
                 },
             ]
         }
@@ -98,6 +105,7 @@ export default {
     background-color: grey;
     box-shadow: 0px 0px 33px -20px #000000;
     transition: .15s ease-in-out;
+    margin-bottom: 30px;
 }
 
 .box:hover {
