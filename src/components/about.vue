@@ -1,14 +1,14 @@
 <template>
 
 <!-- RESUME MODAL -->
-<transition name="slide">
+<!-- <transition name="slide">
     <div class="modal" v-if="modalShow">
         <div class="modal-content">
             <div class="close" @click="modalShow=false">&#215;</div>
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vQIIcbNc9sB2DAXgDy64UXVftspwUJw9Z39tXP64bOnBMwyGXx5hnOubx9bpR63nk6COnng_ttRlF7w/pub?embedded=true" />
         </div>
     </div>
-</transition>
+</transition> -->
 
 <div class="container">
     <img
@@ -33,7 +33,7 @@
         </p>
         
         <div class="links">
-            <button class="resume-btn" @click="showResume">See my Resume</button>
+            <a class="resume-btn" href="https://docs.google.com/document/d/e/2PACX-1vQIIcbNc9sB2DAXgDy64UXVftspwUJw9Z39tXP64bOnBMwyGXx5hnOubx9bpR63nk6COnng_ttRlF7w/pub" target="_blank">See My Resume</a>
             <a href="https://github.com/brianfordcode" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
             <a href="mailto:brianfordcode@gmail.com" target="_blank"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-email-advertising-kiranshastry-solid-kiranshastry-1.png"/></a>
         </div>
@@ -108,10 +108,11 @@ export default {
 .resume-btn {
     margin: 20px;
     padding: 10px;
+    text-decoration: none;
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     background-color: white;
     border: 1px solid black;
-    outline: none;
     cursor: pointer;
     transition: .15s ease-in-out;
 }
