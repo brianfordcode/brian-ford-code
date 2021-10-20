@@ -72,7 +72,7 @@ export default {
                 title: "Math Exercises",
                 kind: "Personal Project of Math Exercises",
                 screenshot: require("../assets/projects/math-screenshot.png"),
-                url: "https://www.mathexercises.netlify.app/",
+                url: "https://mathexercises.netlify.app/",
                 code: "https://github.com/brianfordcode/math-exercises"
                 },
             ]
