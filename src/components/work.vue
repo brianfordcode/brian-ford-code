@@ -1,7 +1,6 @@
 <template>
 <div v-scrollAnimate="'fadeIn'">
 
-
     <h1 class="title">Projects I Make</h1>
 
     <div class="projects-container">
