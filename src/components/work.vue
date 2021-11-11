@@ -68,8 +68,8 @@ export default {
                 code: "https://github.com/brianfordcode/brian-ford-film"
                 },
                 {
-                title: "Math Exercises",
-                kind: "Personal Project of Math Exercises",
+                title: "Code Exercises",
+                kind: "Coding Exercises to show what I can do!",
                 screenshot: require("../assets/projects/math-screenshot.png"),
                 url: "https://mathexercises.netlify.app/",
                 code: "https://github.com/brianfordcode/math-exercises"
