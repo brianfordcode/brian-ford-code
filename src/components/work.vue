@@ -68,12 +68,20 @@ export default {
                 code: "https://github.com/brianfordcode/brian-ford-film"
                 },
                 {
+                title: "Know Learning",
+                kind: "Non-Profit Website",
+                screenshot: require("../assets/projects/know-learning-screenshot.png"),
+                url: "https://knowlearning.netlify.app/",
+                code: "https://github.com/brianfordcode/knowlearning"
+                },
+                {
                 title: "Code Exercises",
                 kind: "Coding Exercises to show what I can do!",
                 screenshot: require("../assets/projects/math-screenshot.png"),
                 url: "https://mathexercises.netlify.app/",
                 code: "https://github.com/brianfordcode/math-exercises"
                 },
+                
             ]
         }
     }
