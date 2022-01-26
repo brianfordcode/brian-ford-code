@@ -81,7 +81,13 @@ export default {
                 url: "https://mathexercises.netlify.app/",
                 code: "https://github.com/brianfordcode/math-exercises"
                 },
-                
+                {
+                title: "Poker Charts",
+                kind: "Charts to Play Poker Optimally",
+                screenshot: require("../assets/projects/poker-charts-screenshot.png"),
+                url: "https://poker-charts.netlify.app/",
+                code: "https://github.com/brianfordcode/preflop-charts"
+                },
             ]
         }
     }
