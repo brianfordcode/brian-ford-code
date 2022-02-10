@@ -6,8 +6,6 @@
       <img src="../assets/tools/html-js-css.png" alt="html-js-css">
       <img src="../assets/tools/vue.png" alt="vue">
       <img src="../assets/tools/sass.png" alt="sass">
-      <img src="../assets/tools/bootstrap.png" alt="bootstrap">
-      <img src="../assets/tools/webpack.png" alt="webpack">
       <img src="../assets/tools/adobe-creative-cloud.png" alt="adobe-creative-cloud">
       <img src="../assets/tools/firebase.png" alt="firebase">
       <img src="../assets/tools/github.png" alt="github">

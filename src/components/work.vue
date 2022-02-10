@@ -18,7 +18,7 @@
                         <a :href="`${project.code}`" target="_blank">View Code</a>
                     </div>
                 </transition>
-                    <img style="height: 200px;"
+                    <img style="height: 200px; width: auto;"
                         :src="project.screenshot"
                         :alt="project.screenshot"
                     >
@@ -88,6 +88,13 @@ export default {
                 url: "https://poker-charts.netlify.app/",
                 code: "https://github.com/brianfordcode/preflop-charts"
                 },
+                {
+                title: "WW2 on this day",
+                kind: "Detailed timeline of WW2 events. Just need content!",
+                screenshot: require("../assets/projects/ww2-on-this-day-screenshot.png"),
+                url: "https://ww2onthisday.com",
+                code: "https://github.com/brianfordcode/ww2-on-this-day"
+                },
             ]
         }
     }
@@ -114,7 +121,9 @@ export default {
 .box {
     overflow: hidden;
     position: relative;
+    object-fit: cover;
     height: 200px;
+    width: 200px;
     background-color: grey;
     box-shadow: 0px 0px 33px -20px #000000;
     transition: .15s ease-in-out;
